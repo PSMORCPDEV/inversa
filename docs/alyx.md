@@ -35,6 +35,13 @@ steamcmd +@sSteamCmdForcePlatformType linux +force_install_dir ~/Games/alyx \
   +login <your Steam user> +app_update 546560 validate +quit
 ```
 
+> [!NOTE]
+> You can use depotdownloader to download the game if you want:
+> ```
+> depotdownloader -username -app 546560 -depot 546561 -depot 546564 -os linux -dir "~/Games/alyx"
+> ```
+> However I still recommend running the fix_depot_links.py script, even if you are using depotdownloader.
+
 steamcmd on macOS writes the depot's symlinks as empty files. Put them back:
 
 ```
